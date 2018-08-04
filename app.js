@@ -15,11 +15,12 @@ $(document).ready (function (){
 
    }
 //test classes and methods here
-   let roll = new Die()
-roll.roll()
+
 
 //other
    $('#button').on("click",function (){
+    let roll = new Die()
+    roll.roll()
        $('<div/>',{
            'class': `div ${roll.roll()}`,
            text: `${roll.roll()}`

@@ -1,11 +1,9 @@
-#button {
-    position: absolute;
-}
+
 .div {
     height: 50px;
     width: 50px;
     background-color: aqua;
     text-align: center;
-    position: relative;
-    margin-right: 20px;
+    position: absolute;
+   
 }
