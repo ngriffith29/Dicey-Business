@@ -20,13 +20,10 @@ $(document).ready (function (){
 roll.roll()
 
 
-
-let div = $("<div/>").text("Hello World")
-
    $('#button').on("click",function (){
        $('<div/>',{
            'class': `div ${roll.roll()}`,
-           text: 'CLICK ME'
+           text: `${roll.roll()}`
        }).appendTo('body');
 })
 
