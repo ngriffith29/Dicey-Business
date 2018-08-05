@@ -1,31 +1,35 @@
-$(document).ready (function (){
-  
+$(document).ready(function () {
+let dieVals = []
 
 
-   class Die {
-       constructor(value){
-        this.value = value
-       }
-       //Methods go under here
-       roll(){
-       this.value = Math.floor(Math.random() * 6) + 1; 
-       return this.value
-       $('div').addClass(`${this.value}`)
-       }
+    class Die {
+        constructor(value) {
+            this.value = value
+        }
+        //Methods go under here
+        roll() {
+            this.value = Math.floor(Math.random() * 6) + 1;
+            //
+            $('<div/>', {
+                'class': `div ${this.value}`,
+                text: `${this.value}`
+            }).appendTo('body');//
+            dieVals.push(`${this.value}`)
+            return this.value
+            
+        }
+    }
 
-   }
-//test classes and methods here
 
 
-//other
-   $('#button').on("click",function (){
-    let roll = new Die()
-    roll.roll()
-       $('<div/>',{
-           'class': `div ${roll.roll()}`,
-           text: `${roll.roll()}`
-       }).appendTo('body');
-})
+
+
+    //other
+    $('#button').on("click", function () {
+        let roll = new Die()
+        roll.roll()
+
+    })
 
 
 
