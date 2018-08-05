@@ -15,7 +15,7 @@ let sum = 0;
             //
             $('<div/>', {
                 'class': `div ${numb}`,
-                text: `${numb}`
+                text: `${this.value}`
             }).appendTo('body');//
             dieVals.push(`${numb}`)
             return this.value     
@@ -41,9 +41,9 @@ let sum = 0;
     $('#sum').on("click", function () {
         
        let sum = dieVals.reduce(function(a,b){
-           return a+b;
+           return Number(a)+Number(b);
        })
-       console.log(dieVals)
+       alert(sum)
 
 
        
@@ -51,7 +51,7 @@ let sum = 0;
 
     })
 
-
+console.log(dieVals)
 
 
 
