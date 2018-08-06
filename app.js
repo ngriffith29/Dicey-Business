@@ -1,6 +1,7 @@
 
 let dieVals = []
 let sum = 0 
+let count = 0
 
 
 class Die {
@@ -15,8 +16,9 @@ class Die {
        dieVals.push(`${this.value}`)      
     }    
     div(cl, text){
+        
         $('<div/>', {
-            'class': `div`,
+            'class': `div ${count++}`,
             text: `${text}`
         }).appendTo('body');
     }
@@ -39,6 +41,7 @@ $("#sum").on("click", function (){
 
 $("body").on("click",".div", function (){
        
-
+     $(this).remove()
+    
     })
 
