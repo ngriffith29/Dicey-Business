@@ -9,6 +9,7 @@ class Die {
         this.value = value
         this.roll()
         this.div(this.value,this.value)
+       
         
     }
     roll(){
@@ -21,6 +22,14 @@ class Die {
             'class': `div ${count++}`,
             text: `${text}`
         }).appendTo('body');
+        $(".div").on("click",function (){
+            console.log('hi')
+        })
+        $(".div").on("dblclick",function (){
+            $(this).remove()
+        })
+        
+
     }
 
     randomNum(num1,num2){
@@ -40,26 +49,10 @@ $("#sum").on("click", function (){
 })
 //
 
-$("body").on("click",".div", function (){
-   let ok = new Die.roll()
-
-   
-
-          
-
-
-})
 
 
 
 
-//Half Working 
-$("body").on("dblclick",".div", function (){
-       
-     $(this).remove()
-     
-   
-     
-    
-    })
+
+
 
