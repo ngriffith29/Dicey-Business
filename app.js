@@ -38,10 +38,28 @@ $("#sum").on("click", function (){
         return Number(a)+Number(b);})
         alert(sum)
 })
+//
 
 $("body").on("click",".div", function (){
+   let ok = new Die.roll()
+
+   
+
+          
+
+
+})
+
+
+
+
+//Half Working 
+$("body").on("dblclick",".div", function (){
        
      $(this).remove()
+     
+   
+     
     
     })
 
