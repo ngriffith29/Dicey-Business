@@ -7,19 +7,16 @@ class Die {
     constructor(value){
         this.value = value
         this.roll()
+        this.div(this.value,this.value)
         
     }
-
     roll(){
         this.value = this.randomNum(6,1)
-       this.div(this.value,this.value)
-       dieVals.push(`${this.value}`)
-       
+       dieVals.push(`${this.value}`)      
     }    
-   
     div(cl, text){
         $('<div/>', {
-            'class': `div ${cl}`,
+            'class': `div`,
             text: `${text}`
         }).appendTo('body');
     }
@@ -40,5 +37,8 @@ $("#sum").on("click", function (){
         alert(sum)
 })
 
+$("body").on("click",".div", function (){
+       
 
+    })
 
