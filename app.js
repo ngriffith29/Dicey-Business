@@ -10,6 +10,7 @@ class Die {
         this.roll()
         this.div(this.value,this.value)
        
+       
 
 
         
@@ -18,7 +19,7 @@ class Die {
     roll(){
         this.value = this.randomNum(6,1)
        dieVals.push(`${this.value}`) 
-      
+     
       
        
       
@@ -31,13 +32,14 @@ class Die {
         }).appendTo('body');
         $("div").on("dblclick",function (){
             $(this).remove()    
-          
-                 
+           
+                         
         })
 
         $('div').on("click", function (){
             console.log("hi")
         })
+
         
         
 
@@ -60,6 +62,7 @@ $("#sum").on("click", function (){
        
 })
 //
+
 
 
 
