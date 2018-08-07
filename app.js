@@ -12,15 +12,7 @@ class Die {
        
 
 
-         $("div").on("dblclick",function (){
-            $(this).remove()    
-          
-                 
-        })
-
-        $('div').on("click", function (){
         
-        })
         
     }
     roll(){
@@ -37,7 +29,15 @@ class Die {
             'class': `${count++}`,
             text: `${text}`
         }).appendTo('body');
+        $("div").on("dblclick",function (){
+            $(this).remove()    
+          
+                 
+        })
 
+        $('div').on("click", function (){
+            console.log("hi")
+        })
         
         
 
