@@ -10,24 +10,35 @@ class Die {
         this.roll()
         this.div(this.value,this.value)
        
+
+
+         $("div").on("dblclick",function (){
+            $(this).remove()    
+          
+                 
+        })
+
+        $('div').on("click", function (){
+        
+        })
         
     }
     roll(){
         this.value = this.randomNum(6,1)
-       dieVals.push(`${this.value}`)      
+       dieVals.push(`${this.value}`) 
+      
+      
+       
+      
     }    
     div(cl, text){
         
         $('<div/>', {
-            'class': `div ${count++}`,
+            'class': `${count++}`,
             text: `${text}`
         }).appendTo('body');
-        $(".div").on("click",function (){
-            console.log('hi')
-        })
-        $(".div").on("dblclick",function (){
-            $(this).remove()
-        })
+
+        
         
 
     }
@@ -46,6 +57,7 @@ $("#sum").on("click", function (){
     let sum = dieVals.reduce(function(a,b){
         return Number(a)+Number(b);})
         alert(sum)
+       
 })
 //
 
